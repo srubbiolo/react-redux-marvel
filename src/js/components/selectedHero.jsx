@@ -5,7 +5,6 @@ import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 const SelectedHero = () => {
 
   const selectedHero = useSelector(state => state.selectedHero);
-  console.log('esto valeria el selected hero', selectedHero);
 
   return ( !(Object.keys(selectedHero).length === 0) ? <Card style={{ width: '30rem', marginTop: '10px' }}>
     <Card.Img variant="top" src={`${selectedHero.thumbnail.path}/landscape_incredible.${selectedHero.thumbnail.extension}`} />

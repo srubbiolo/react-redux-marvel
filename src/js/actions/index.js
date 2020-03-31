@@ -10,7 +10,6 @@ export function getHero(apiKey, heroId) {
     return fetch(`https://gateway.marvel.com:443/v1/public/characters/${heroId}?apikey=${apiKey}`)
       .then(response => response.json())
       .then(json => {
-        console.log(json);
         if (json.code === 404) {
           dispatch({ type: HERO_LOADED, payload: {} });
         } else {
